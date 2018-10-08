@@ -1,0 +1,13 @@
+{
+    "autoload":
+    {
+        "psr-4":
+        {
+            "": "src/"
+        }
+    },
+
+    "name": "younesform/quete_simple_mvc",
+    "description": "quete_2_mvc_2",
+    "require": {}
+}
