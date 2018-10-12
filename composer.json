@@ -10,6 +10,7 @@
     "name": "younesform/quete_simple_mvc",
     "description": "quete_2_mvc_2",
     "require": {
-        "nikic/fast-route": "^1.3"
+        "nikic/fast-route": "^1.3",
+        "twig/twig": "^2.5"
     }
 }

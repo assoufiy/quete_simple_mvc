@@ -1,7 +1,7 @@
 <?php
 namespace Model;
 // src/Model/ItemManager.php
-require __DIR__ . '/../../app/db.php';
+//require __DIR__ . '/../../app/db.php';
 
 
 class ItemManager
@@ -30,4 +30,3 @@ class ItemManager
 
 }
 
-?>
