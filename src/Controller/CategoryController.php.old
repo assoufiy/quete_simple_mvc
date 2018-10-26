@@ -1,0 +1,29 @@
+<?php
+namespace Controller;
+use Model\old;
+use Twig_Loader_Filesystem;
+use Twig_Environment;
+
+
+class old extends AbstractController
+{
+
+    private $twig;
+
+
+    public function index()
+    {
+        $categoryManager = new old($this->pdo);
+        $categories = $categoryManager->selectAll();
+        return $this->twig->render('category.html.twig', ['categories' => $categories]);
+
+    }
+    public function show(int $id)
+    {
+        $categoryManager = new old($this->pdo);
+        $categorie = $categoryManager->selectOneById($id);
+        return $this->twig->render('showCategory.html.twig', ['category' => $categorie]);
+    }
+}
+
+

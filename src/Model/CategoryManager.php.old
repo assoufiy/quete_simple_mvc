@@ -4,22 +4,23 @@ namespace Model;
 
 
 
-class CategoryManager
+
+class old extends AbstractManager
 {
 
 // récupération de tous les categories
-    public function selectAllCategories(): array
+    public function selectAll(): array
     {
-        $pdo = new \PDO(DSN, USER, PASS);
+
         $query = "SELECT * FROM category";
         $res = $pdo->query($query);
         return $res->fetchAll();
     }
 
 // la méthode prend l'id en paramètre
-    public function selectOneCategory(int $id) : array
+    public function selectOneById(int $id) : array
     {
-        $pdo = new \PDO(DSN, USER, PASS);
+
         $query = "SELECT * FROM category WHERE id = :id";
         $statement = $pdo->prepare($query);
         $statement->bindValue(':id', $id, \PDO::PARAM_INT);
